@@ -1,0 +1,116 @@
+.header {
+    border-bottom: 1px solid #ECECEC;
+}
+
+.header__container {
+    display: flex;
+    align-items: center;
+
+
+    .header__nav {
+        display: flex;
+        align-items: center;
+    
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.14;
+        letter-spacing: 0.02em;
+    
+        color: var(--main-color);
+    }
+    
+    .menu {
+        display: flex;
+        margin-left: 93px;
+    
+        cursor: pointer;
+        @extend %list;
+    }
+    
+    .menu__item:not(:last-child) {
+        margin-right: 50px;
+
+    }
+    
+    .menu__link {
+        display: block;
+        padding-top: 32px;
+        padding-bottom: 32px;
+        color: var(--main-color);
+    
+        @include transitions(color);
+        @extend %link;
+
+        &:hover,
+        &:focus {
+            color: var(--second-color);
+        }
+    }
+    
+    .menu__link--active {
+        position: relative;
+        color: var(--second-color);
+
+        &::after {
+            display: block;
+            content: "";
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            height: 4px;
+            width: 100%;
+            background-color: var(--second-color);
+            border-radius: 4px;
+        }
+    }
+    
+    .contacts {
+        display: flex;
+        margin-left: auto;
+    
+        cursor: pointer;
+        @extend %list;
+    }
+    
+    .contacts__item:not(:last-child) {
+        margin-right: 50px;
+    }
+    
+    .contacts__link {
+        display: flex;
+        align-items: center;
+    
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.14;
+        letter-spacing: 0.02em;
+        color: var(--main-text-color);
+    
+        @include transitions(color);
+        @extend %link;
+
+        &:hover,
+        &:focus {
+            color: var(--second-color);
+        }
+    }
+    
+    .contacts__icon{
+        margin-right: 10px;
+        width: 16px;
+        height: 12px;
+        fill: var(--header-icon-color);
+
+        @include transitions(fill);
+    }
+
+    .contacts__icon--tel {
+        height: 16px;
+    }
+
+    .contacts__item:hover .contacts__icon,
+    .contacts__item:focus .contacts__icon{
+        fill: var(--second-color);
+    }
+
+}

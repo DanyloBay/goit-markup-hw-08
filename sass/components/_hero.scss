@@ -1,0 +1,32 @@
+.hero {
+    max-width: 1600px;
+    height: 600px;
+    padding: 200px 0;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+
+    background-color: var(--background-color);
+    background-image: linear-gradient(to right,
+            var(--background-gradient),
+            var(--background-gradient)),
+        url(../images/header.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    .hero__title {
+        margin: 0;
+        margin-bottom: 30px;
+    
+        font-weight: 900;
+        font-size: 44px;
+        line-height: 1.36;
+        letter-spacing: 0.06em;
+    
+        color: var(--white-text-color);
+    
+        text-align: center;
+        text-transform: uppercase;
+    }
+}
