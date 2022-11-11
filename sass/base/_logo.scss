@@ -7,6 +7,10 @@
     color: var(--main-color);
 
     @extend %link;
+
+    @media screen and (max-width: 767.5px){
+        display: none;
+    }
 }
 
 .logo__article,
