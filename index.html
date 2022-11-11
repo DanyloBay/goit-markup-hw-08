@@ -23,12 +23,20 @@
 
                 <a href="./index.html" class="logo"><span class="logo__article">Web</span>Studio</a>
 
-                <ul class="menu">
-                    <li class="menu__item"><a href="#" class="menu__link menu__link--active">Студія</a></li>
-                    <li class="menu__item"><a href="./portfolio.html" class="menu__link">Портфоліо</a></li>
-                    <li class="menu__item"><a href="#" class="menu__link">Контакти</a></li>
-                </ul>
+                <button type="button" class="menu-mobile-button is-open" aria-expanded="false" aria-controls="menu-container">
+                    <svg width="24" height="16" aria-label="Перемикач мобільного меню">
+                        <use class="icon-menu" href="./images/icons.svg#icon-menu"></use>
+                        <use class="icon-menu-close" href="./images/icons.svg#icon-menu_close"></use>
+                    </svg>
+                </button>
 
+                <div class="menu-container is-open" id="menu-container">
+                    <ul class="menu">
+                        <li class="menu__item"><a href="#" class="menu__link menu__link--active">Студія</a></li>
+                        <li class="menu__item"><a href="./portfolio.html" class="menu__link">Портфоліо</a></li>
+                        <li class="menu__item"><a href="#" class="menu__link">Контакти</a></li>
+                    </ul>
+                </div>
             </nav>
 
             <ul class="contacts">
@@ -503,6 +511,8 @@
         </div>
 
     </footer>
+
+    <script src="./js/mobile-menu.js"></script>
 
     <script src="./js/modal.js"></script>
 
