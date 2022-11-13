@@ -45,11 +45,26 @@
 
 .buttons {
     display: flex;
-    justify-content: center;
-
-    margin-bottom: 50px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
 
     @extend %list;
+
+    @media screen and (min-width: 768px){
+        justify-content: center;
+    
+        margin-bottom: 50px;
+    }
+}
+
+.buttons__item
+{
+    &:not(:last-child)
+    {
+        margin-right: 8px;
+    }
+
+    margin-bottom: 15px;
 }
 
 .button {

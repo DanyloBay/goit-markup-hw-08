@@ -8,6 +8,8 @@
     background-color: var(--backdrop);
 
     transition: transform 500ms ease, opacity 300ms ease, visibility 300ms ease;
+
+    overflow-y: scroll;
 }
 
 .backdrop__is-hidden {
@@ -19,8 +21,8 @@
 }
 
 .modal {
-    max-width: 528px;
-    min-height: 581px;
+    max-width: 450px;
+    max-height: 609px;
     padding: 40px;
 
     background-color: var(--white);
@@ -29,6 +31,16 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+
+    @media screen and (max-width: 1199px) {
+        min-width: 450px;
+        width: calc(100% / 3);
+    }
+        @media screen and (min-width: 1200px) {
+        min-width: 528px;
+        width: calc(100% / 3);
+        min-height: 581px;
+      }
 
     .modal__button {
         display: flex;
@@ -71,10 +83,16 @@
         padding: 0;
         font-weight: 700;
         font-size: 20px;
-        line-height: 1.15;
+        line-height: 1.5;
         text-align: center;
         letter-spacing: 0.03em;
+        
     
         color: var(--main-color);
+
+        @media screen and (min-width: 1200px){
+            font-size: 20px;
+            line-height: 1.15;
+        }
     }
 }

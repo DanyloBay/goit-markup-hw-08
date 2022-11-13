@@ -1,19 +1,46 @@
 .portfolio {
-    display: flex;
-    flex-wrap: wrap;
+    margin: 0;
+    padding-left: 0;
 
     @extend %list;
 
+    @media screen and (min-width: 768px) {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -15px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -15px;
+    }
+
     .portfolio__item {
-        width: 370px;
-    }
-    
-    .portfolio__item:not(:nth-child(3n)) {
-        margin-right: 30px;
-    }
-    
-    .portfolio__item:not(:nth-last-child(-n+3)) {
-        margin-bottom: 30px;
+        width: 450px;
+
+        @media screen and (min-width: 768px) {
+            width: 354px;
+
+            margin: 15px;
+            width: calc((100% - 4 * 15px) / 2);
+        }
+
+        @media screen and (min-width: 1200px) {
+            width: 370px;
+
+            margin: 15px;
+            width: calc((100% - 8 * 15px) / 4);
+
+            &:not(:nth-child(3n)) {
+                margin-right: 30px;
+            }
+            
+            &:not(:nth-last-child(-n+3)) {
+                margin-bottom: 30px;
+            }
+        }
+
     }
     
     .portfolio__link {

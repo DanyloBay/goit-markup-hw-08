@@ -1,0 +1,164 @@
+@media screen and (max-width: 767.5px)
+{
+    .menu__container.is-open {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        padding: 48px 40px;
+        background-color: #fff;
+        z-index: 3;
+        max-width: none;
+      }
+}
+
+.menu {
+    display: none;
+    @extend %list;
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+        flex-direction: row;
+        margin-left: 93px;
+        margin-bottom: 0;
+
+        cursor: pointer;
+    }
+}
+
+.menu__container.is-open .menu
+{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 302px;
+
+    cursor: pointer;
+    @extend %list;
+}
+
+.menu__item{
+
+    &:not(:last-child)
+    {
+        margin-bottom: 32px;
+    }
+
+    &:not(:last-child) {
+        @media screen and (min-width: 768px) {
+            margin-right: 50px;
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+
+    }
+}
+
+.menu__link {
+    display: block;
+    color: var(--main-color);
+
+    @include transitions(color);
+    @extend %link;
+
+    &:hover,
+    &:focus {
+        color: var(--second-color);
+    }
+
+    @media screen and (min-width: 768px) {
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
+}
+
+.menu__link--active {
+    color: var(--second-color);
+
+    @media screen and (min-width: 768px) {
+        position: relative;
+
+        &::after {
+            display: block;
+            content: "";
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            height: 4px;
+            width: 100%;
+            background-color: var(--second-color);
+            border-radius: 4px;
+        }
+    }
+
+}
+
+.menu-mobile-button
+{
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+
+    cursor: pointer;
+
+    color: var(--main-color);
+    background-color: var(--white);
+
+    transition: 
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    .menu__container.is-open &
+    {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+    }
+
+
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+}
+
+.button__mobile-icon
+{
+    width: 40px;
+    height: 40px;
+    fill: currentColor;
+}
+
+.icon-menu
+{
+    display: none;
+
+    .button__mobile-icon:hover &,
+    .button__mobile-icon:focus-within &
+    {
+        color: var(--second-color);
+        background-color: var(--white);
+    }
+}
+
+.icon-menu-close
+{
+    .button__mobile-icon:hover &,
+    .button__mobile-icon:focus-within &
+    {
+        color: var(--second-color);
+        background-color: var(--white);
+    }
+}
+
+.menu-mobile-button.is-open .icon-menu
+{
+    display: block;
+}
+
+.menu-mobile-button.is-open .icon-menu-close
+{
+    display: none;
+}
+
