@@ -2,13 +2,13 @@
     margin: 0;
     padding-left: 0;
 
-    @media screen and (min-width: 768px) {
+    @include breakpointFrom(tablet) {
         display: flex;
         flex-wrap: wrap;
         margin: -15px;
     }
 
-    @media screen and (min-width: 1200px) {
+    @include breakpointFrom(desktop) {
         display: flex;
         margin: -15px;
     }
@@ -28,12 +28,12 @@
     
         text-transform: uppercase;
 
-        @media screen and (min-width: 768px) {
+        @include breakpointFrom(tablet) {
             text-align: left;
     
         }
     
-        @media screen and (min-width: 1200px) {
+        @include breakpointFrom(desktop) {
             text-align: left;
         }
     }
@@ -41,14 +41,14 @@
     .features__item
     {
 
-        @media screen and (min-width: 768px) {
+        @include breakpointFrom(tablet) {
             width: 374px;
 
             margin: 15px;
             width: calc((100% - 4 * 15px) / 2);
         }
 
-        @media screen and (min-width: 1200px) {
+        @include breakpointFrom(desktop) {
             width: 270px;
 
             margin: 15px;
@@ -57,7 +57,7 @@
 
         &:not(:last-child)
         {
-            @media screen and (max-width: 767px){
+            @include breakpointTo(tablet){
                 margin-bottom: 30px;
             }
         }
@@ -82,11 +82,11 @@
         width: 65px;
         height: 70px;
 
-        @media screen and (min-width: 768px) {
+        @include breakpointFrom(tablet) {
             width: 70px;
         }
     
-        @media screen and (min-width: 1200px) {
+        @include breakpointFrom(desktop) {
             width: 70px;
         }
     }

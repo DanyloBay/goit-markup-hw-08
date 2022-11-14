@@ -20,7 +20,7 @@
     display: none;
     @extend %list;
 
-    @media screen and (min-width: 768px) {
+    @include breakpointFrom(tablet) {
         display: flex;
         flex-direction: row;
         margin-left: 93px;
@@ -48,7 +48,7 @@
     }
 
     &:not(:last-child) {
-        @media screen and (min-width: 768px) {
+        @include breakpointFrom(tablet) {
             margin-right: 50px;
             padding-bottom: 0;
             margin-bottom: 0;
@@ -69,7 +69,7 @@
         color: var(--second-color);
     }
 
-    @media screen and (min-width: 768px) {
+    @include breakpointFrom(tablet) {
         padding-top: 32px;
         padding-bottom: 32px;
     }
@@ -78,7 +78,7 @@
 .menu__link--active {
     color: var(--second-color);
 
-    @media screen and (min-width: 768px) {
+    @include breakpointFrom(tablet) {
         position: relative;
 
         &::after {
@@ -121,7 +121,7 @@
     }
 
 
-    @media screen and (min-width: 768px) {
+    @include breakpointFrom(tablet) {
         display: none;
     }
 }

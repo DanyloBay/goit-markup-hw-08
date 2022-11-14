@@ -4,13 +4,13 @@
 
     @extend %list;
 
-    @media screen and (min-width: 768px) {
+    @include breakpointFrom(tablet) {
         display: flex;
         flex-wrap: wrap;
         margin: -15px;
     }
 
-    @media screen and (min-width: 1200px) {
+    @include breakpointFrom(desktop) {
         display: flex;
         flex-wrap: wrap;
         margin: -15px;
@@ -18,16 +18,20 @@
 
     .portfolio__item {
         max-width: 450px;
-        margin-bottom: 30px;
+        
+        &:not(:last-child)
+        {
+            margin-bottom: 30px;
+        }
 
-        @media screen and (min-width: 768px) {
+        @include breakpointFrom(tablet) {
             width: 354px;
 
             margin: 15px;
             width: calc((100% - 4 * 15px) / 2);
         }
 
-        @media screen and (min-width: 1200px) {
+        @include breakpointFrom(desktop) {
             width: 370px;
 
             margin: 15px;
@@ -57,51 +61,6 @@
         overflow: hidden;
     }
     
-    .portfolio__thumb-item::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        transform: translateY(100%);
-    
-        @include transitions(transform);
-    
-    }
-    
-    
-    .portfolio__thumb-item:hover::before {
-        transform: translateY(0);
-    }
-    
-    
-    .portfolio__thumb-overlay {
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 1.55;
-        letter-spacing: 0.03em;
-        color: var(--white-text-color);
-        margin: 0;
-    
-        display: inline-block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        padding: 63px 24px;
-        transform: translateY(100%);
-    
-        background-color: var(--overlay-color);
-    
-        @include transitions(transform);
-    }
-    
-    .portfolio__item:hover .portfolio__thumb-overlay,
-    .portfolio__item:focus .portfolio__thumb-overlay{
-        transform: translateY(0);
-    }
 
     .portfolio__box {
         padding: 20px 24px;
@@ -119,5 +78,50 @@
         letter-spacing: 0.06em;
     
         color: var(--main-color);
+    }
+}
+
+.portfolio__thumb-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(100%);
+
+    @include transitions(transform);
+
+    &:hover::before
+    {
+        transform: translateY(0);
+    }
+
+}
+
+.portfolio__thumb-overlay {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.55;
+    letter-spacing: 0.03em;
+    color: var(--white-text-color);
+    margin: 0;
+
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 63px 24px;
+    transform: translateY(100%);
+
+    background-color: var(--overlay-color);
+
+    @include transitions(transform);
+
+    .portfolio__item:hover &,
+    .portfolio__item:focus &{
+        transform: translateY(0);
     }
 }

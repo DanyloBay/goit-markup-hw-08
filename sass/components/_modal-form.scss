@@ -112,7 +112,7 @@
     line-height: 1.16;
     letter-spacing: 0.03em;
 
-    @media screen and (min-width: 1200px){
+    @include breakpointFrom(desktop){
         font-weight: 400;
         font-size: 14px;
         line-height: 1.71;

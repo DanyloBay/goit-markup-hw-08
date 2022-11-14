@@ -20,7 +20,7 @@
         background-image: url(../../images/header@2x.jpg);
     }
 
-    @media screen and (min-width: 1200px) {
+    @include breakpointFrom(desktop) {
         padding: 200px 0;
     }
 
@@ -38,7 +38,7 @@
         text-align: center;
         text-transform: uppercase;
 
-        @media screen and (min-width: 1200px){
+        @include breakpointFrom(desktop){
             font-size: 44px;
             line-height: 1.36;
         }

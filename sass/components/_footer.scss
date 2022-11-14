@@ -4,13 +4,13 @@
 
     .footer--container {
 
-        @media screen and (max-width: 767.5px){
+        @include breakpointTo(tablet){
             display: flex;
             flex-direction: column;
             align-items: center;
         }
 
-        @media screen and (min-width: 768px) and (max-width: 1200px){
+        @include breakpointBetween(tablet, desktop){
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
@@ -18,7 +18,7 @@
             padding: 0 76px;
         }
 
-        @media screen and (min-width: 1200px){
+        @include breakpointFrom(desktop){
             display: flex;
             align-items: baseline;
         }
@@ -26,16 +26,16 @@
 
     .footer__item
     {
-        @media screen and (max-width: 767.5px){
+        @include breakpointTo(tablet){
             margin-bottom: 60px;
             text-align: center;
         }
 
-        @media screen and (min-width: 768px){
+        @include breakpointFrom(tablet){
             margin-bottom: 60px;
         }
         
-        @media screen and (min-width: 1200px){
+        @include breakpointFrom(desktop){
             flex-grow: 1;
             margin-bottom: 0;
         }
@@ -81,7 +81,7 @@
     }
 
     .footer--margin-left {
-        @media screen and (min-width: 1200px){
+        @include breakpointFrom(desktop){
             margin-left: 70px;
         }
     }
@@ -104,7 +104,7 @@
         color: var(--white-text-color);
         text-align: center;
 
-        @media screen and (min-width: 1200px){
+        @include breakpointFrom(desktop){
             display: flex;
             text-align: start;
         }
@@ -122,11 +122,11 @@
 
         @extend %list;
 
-        @media screen and (min-width: 768px) {
+        @include breakpointFrom(tablet) {
             margin-bottom: 0;
         }
 
-        @media screen and (min-width: 1200px) {
+        @include breakpointFrom(desktop) {
             margin-bottom: 0;
         }
     }
@@ -166,7 +166,7 @@
 
     .footer__thumb
     {
-        @media screen and (min-width: 768px){
+        @include breakpointFrom(tablet){
             display: flex;
             flex-direction: column;
             align-self: flex-end;
@@ -174,14 +174,14 @@
             margin: 0 auto;
         }
 
-        @media screen and (min-width: 1200px) {
+        @include breakpointFrom(desktop) {
             align-self: baseline;
         }
     }
 
     .footer__form--mgleft
     {
-        @media screen and (min-width: 1200px) {
+        @include breakpointFrom(desktop) {
             margin-left: 93px;
         }
     }
@@ -199,16 +199,16 @@
 
         width: 100%;
 
-        @media screen and (max-width: 767.5px) {
+        @include breakpointTo(tablet) {
             margin-bottom: 20px;
         }
 
-        @media screen and (min-width: 768px){
+        @include breakpointFrom(tablet){
             width: 450px;
             margin-bottom: 20px;
         }
 
-        @media screen and (min-width: 1200px) {
+        @include breakpointFrom(desktop) {
             width: 358px;
             margin-bottom: 0;
         }
@@ -228,14 +228,14 @@
 
     .footer__form {
         
-        @media screen and (max-width: 767.5px) {
+        @include breakpointTo(tablet) {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             max-width: 450px;
         }
 
-        @media screen and (min-width: 1200px) {
+        @include breakpointFrom(desktop) {
             display: flex;
             justify-content: space-between;
         }
@@ -261,11 +261,11 @@
 
         cursor: pointer;
 
-        @media screen and (min-width: 768px){
+        @include breakpointFrom(tablet){
             margin: 0 auto;
         }
 
-        @media screen and (min-width: 1200px) {
+        @include breakpointFrom(desktop) {
             margin-left: 12px;
         }
 
