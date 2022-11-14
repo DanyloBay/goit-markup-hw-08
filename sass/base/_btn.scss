@@ -48,6 +48,11 @@
     flex-wrap: wrap;
     margin-bottom: 40px;
 
+    &:nth-child(3)
+    {
+        flex-wrap: wrap;
+    }
+
     @extend %list;
 
     @media screen and (min-width: 768px){
@@ -75,6 +80,7 @@
     line-height: 1.6;
     letter-spacing: 0.03em;
     background-color: var(--background-button);
+    color: var(--main-color);
 
     text-align: center;
     cursor: pointer;
