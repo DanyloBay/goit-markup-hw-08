@@ -10,6 +10,11 @@
     transition: transform 500ms ease, opacity 300ms ease, visibility 300ms ease;
 
     overflow-y: scroll;
+
+    @include breakpointTo(tablet)
+    {
+        padding: 93px 15px;
+    }
 }
 
 .backdrop__is-hidden {
@@ -27,19 +32,40 @@
 
     background-color: var(--white);
 
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    @include breakpointTo(mobile)
+    {
+        position: absolute;
+    }
 
-    @include breakpointTo(desktop) {
+    @include breakpointBetween(mobile, tablet) {
         min-width: 450px;
         width: calc(100% / 3);
+        
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
+
+    @include breakpointFrom(tablet) {
+        min-width: 450px;
+        width: calc(100% / 3);
+        
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
     @include breakpointFrom(desktop) {
         min-width: 528px;
         width: calc(100% / 3);
         min-height: 581px;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
       }
 
     .modal__button {

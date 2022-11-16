@@ -46,7 +46,6 @@
 .buttons {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 40px;
 
     &:nth-child(3)
     {
@@ -55,22 +54,39 @@
 
     @extend %list;
 
+    @include breakpointTo(tablet)
+    {
+        margin-bottom: 30px;
+    }
+
     @include breakpointFrom(tablet)
     {
         justify-content: center;
-    
+
+        margin-bottom: 30px;
+    }
+
+    @include breakpointFrom(desktop)
+    {
         margin-bottom: 50px;
     }
 }
 
 .buttons__item
 {
+
     &:not(:last-child)
     {
         margin-right: 8px;
     }
 
-    margin-bottom: 15px;
+    @include breakpointTo(tablet)
+    {
+        &:not(:last-child)
+        {
+            margin-bottom: 15px;
+        }
+    }
 }
 
 .button {

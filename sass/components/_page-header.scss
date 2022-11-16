@@ -8,6 +8,8 @@
     @include breakpointFrom(tablet) {
         display: flex;
         align-items: center;
+
+        flex-direction: row;
     }
 
     .header__nav {
@@ -30,4 +32,3 @@
         }
     }
 }
-

@@ -18,7 +18,7 @@
 
     <header class="header">
 
-        <div class="container header__container menu__container" data-menu>
+        <div class="container header__container menu__container" id="menu-container" data-menu>
             <nav class="header__nav">
 
                 <a href="./index.html" class="logo"><span class="logo__article">Web</span>Studio</a>
@@ -41,7 +41,7 @@
                     <li class="contacts__item">
                         <a href="mailto:info@devstudio.com" class="contacts__link contacts__link--text-color">
                             <svg class="contacts__icon">
-                                <use href="./images/icons.svg#icon-mail" "></use>
+                                <use href="./images/icons.svg#icon-mail"></use>
                             </svg> info@devstudio.com</a>
                     </li>
                     <li class="contacts__item">
@@ -100,18 +100,18 @@
                                     <picture>
 
                                         <source
-                                            srcset="/images/portfolio/portfolio1-desktop.jpg 1x, /images/portfolio/portfolio1-desktop@2x.jpg 2x"
+                                            srcset="./images/portfolio/portfolio1-desktop.jpg 1x, ./images/portfolio/portfolio1-desktop@2x.jpg 2x"
                                             media="(min-width: 1200px)"
                                         />
             
                                         <source
-                                            srcset="/images/portfolio/portfolio1-tablet.jpg 1x, /images/portfolio/portfolio1-tablet@2x.jpg 2x"
+                                            srcset="./images/portfolio/portfolio1-tablet.jpg 1x, ./images/portfolio/portfolio1-tablet@2x.jpg 2x"
                                             media="(min-width: 768px)"
                                         />
             
                                         <source
                                             srcset="./images/portfolio/portfolio1-mobile.jpg 1x, ./images/portfolio/portfolio1-mobile@2x.jpg 2x"
-                                            media="(min-width: 480px)"
+                                            media="(max-width: 767.98px)"
                                         />
             
                                         <img 
@@ -152,7 +152,7 @@
             
                                         <source
                                             srcset="./images/portfolio/portfolio2-mobile.jpg 1x, ./images/portfolio/portfolio2-mobile@2x.jpg 2x"
-                                            media="(min-width: 480px)"
+                                            media="(max-width: 767.98px)"
                                         />
             
                                         <img 
@@ -193,7 +193,7 @@
             
                                         <source
                                             srcset="./images/portfolio/portfolio3-mobile.jpg 1x, ./images/portfolio/portfolio3-mobile@2x.jpg 2x"
-                                            media="(min-width: 480px)"
+                                            media="(max-width: 767.98px)"
                                         />
             
                                         <img 
@@ -234,7 +234,7 @@
             
                                         <source
                                             srcset="./images/portfolio/portfolio4-mobile.jpg 1x, ./images/portfolio/portfolio4-mobile@2x.jpg 2x"
-                                            media="(min-width: 480px)"
+                                            media="(max-width: 767.98px)"
                                         />
             
                                         <img 
@@ -275,7 +275,7 @@
             
                                         <source
                                             srcset="./images/portfolio/portfolio5-mobile.jpg 1x, ./images/portfolio/portfolio5-mobile@2x.jpg 2x"
-                                            media="(min-width: 480px)"
+                                            media="(max-width: 767.98px)"
                                         />
             
                                         <img 
@@ -316,7 +316,7 @@
             
                                         <source
                                             srcset="./images/portfolio/portfolio6-mobile.jpg 1x, ./images/portfolio/portfolio6-mobile@2x.jpg 2x"
-                                            media="(min-width: 480px)"
+                                            media="(max-width: 767.98px)"
                                         />
             
                                         <img 
@@ -357,7 +357,7 @@
             
                                         <source
                                             srcset="./images/portfolio/portfolio7-mobile.jpg 1x, ./images/portfolio/portfolio7-mobile@2x.jpg 2x"
-                                            media="(min-width: 480px)"
+                                            media="(max-width: 767.98px)"
                                         />
             
                                         <img 
@@ -398,7 +398,7 @@
             
                                         <source
                                             srcset="./images/portfolio/portfolio8-mobile.jpg 1x, ./images/portfolio/portfolio8-mobile@2x.jpg 2x"
-                                            media="(min-width: 480px)"
+                                            media="(max-width: 767.98px)"
                                         />
             
                                         <img 
@@ -439,7 +439,7 @@
             
                                         <source
                                             srcset="./images/portfolio/portfolio9-mobile.jpg 1x, ./images/portfolio/portfolio9-mobile@2x.jpg 2x"
-                                            media="(min-width: 480px)"
+                                            media="(max-width: 767.98px)"
                                         />
             
                                         <img 
@@ -524,9 +524,9 @@
             <div class="footer__thumb footer__form--mgleft">
                 <p class="footer__tittle">Підпишіться на розсилку</p>
 
-                    <form class="footer__form" action="">
+                    <form class="footer__form">
 
-                        <input class="footer__input" type="email" name="email" id="" placeholder="E-mail">
+                        <input class="footer__input" type="email" name="email" placeholder="E-mail">
 
                         <button type="submit" class="footer__button">Підписатися
                             <span class="footer__button-item">

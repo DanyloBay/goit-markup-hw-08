@@ -13,9 +13,8 @@
         @include breakpointBetween(tablet, desktop){
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-between;
-
-            padding: 0 76px;
+            justify-content: space-around;
+            align-items: baseline;
         }
 
         @include breakpointFrom(desktop){
@@ -26,13 +25,10 @@
 
     .footer__item
     {
-        @include breakpointTo(tablet){
+        @include breakpointTo(desktop)
+        {
             margin-bottom: 60px;
             text-align: center;
-        }
-
-        @include breakpointFrom(tablet){
-            margin-bottom: 60px;
         }
         
         @include breakpointFrom(desktop){
@@ -91,6 +87,8 @@
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
+
+        margin-bottom: 60px;
     }
     
     .footer__tittle {
@@ -116,7 +114,6 @@
         align-items: center;
     
         padding: 0;
-        margin-bottom: 60px;
     
         gap: 10px;
 
