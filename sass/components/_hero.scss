@@ -20,6 +20,24 @@
         background-image: url(../images/header@2x.jpg);
     }
 
+    @include breakpointFrom(tablet)
+    {
+        background-image: linear-gradient(to right,
+        var(--background-gradient),
+        var(--background-gradient)),
+        url(../images/header.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi)
+        {
+            background-image: url(../images/header@2x.jpg);
+        }
+
+    }
+
     @include breakpointFrom(desktop) {
         padding: 200px 0;
 
